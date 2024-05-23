@@ -22,5 +22,17 @@ describe('CertificateService', () => {
 
       expect(result).toBeTruthy();
     });
+
+    it('should return false if grade is better than minimum grade', () => {
+      const result = service.canGenerateCertificate(3);
+
+      expect(result).toBeFalsy();
+    });
+
+    it('should return true if grade is equal to the minimum grade', () => {
+      const result = service.canGenerateCertificate(6);
+
+      expect(result).toBeTruthy();
+    });
   });
 });

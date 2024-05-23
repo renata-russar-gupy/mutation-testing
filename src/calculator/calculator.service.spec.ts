@@ -17,18 +17,24 @@ describe('CalculatorService', () => {
   });
 
   describe('add', () => {
-    it('should add two numbers correctly', () => {
-      const result = service.add(1, 0);
+    it.each([
+      [1, 0, 1],
+      [1, 2, 3]
+    ])('should add two numbers correctly', (a, b, expected) => {
+      const result = service.add(a, b);
 
-      expect(result).toEqual(1);
+      expect(result).toEqual(expected);
     });
   });
 
   describe('multiply', () => {
-    it('should multiply two numbers correctly', () => {
-      const result = service.multiply(10, 1);
+    it.each([
+      [10, 1, 10],
+      [10, 2, 20]
+    ])('should multiply two numbers correctly', (a, b, expected) => {
+      const result = service.multiply(a, b);
 
-      expect(result).toEqual(10);
+      expect(result).toEqual(expected);
     });
   });
 });
