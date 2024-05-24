@@ -19,7 +19,7 @@ describe('CalculatorService', () => {
   describe('add', () => {
     it.each([
       [1, 0, 1],
-      [1, 2, 3]
+      [1, 2, 3],
     ])('should add two numbers correctly', (a, b, expected) => {
       const result = service.add(a, b);
 
@@ -30,7 +30,7 @@ describe('CalculatorService', () => {
   describe('multiply', () => {
     it.each([
       [10, 1, 10],
-      [10, 2, 20]
+      [10, 2, 20],
     ])('should multiply two numbers correctly', (a, b, expected) => {
       const result = service.multiply(a, b);
 
