@@ -49,6 +49,7 @@ export class CreatorService {
       courseId: id,
       company: 1,
     });
+
     return id;
   }
 }
